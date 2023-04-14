@@ -43,19 +43,21 @@ void __interrupt() isr(void){
 // --------------- Prototipos --------------- 
 void setup(void);
 void setupUART(void);
+void cadena(char *cursor);
 
 // --------------- main --------------- 
 void main(void){
     setup();
     setupUART();
     
+    //char *cursor = "\r ZELDA MEJOR JUEGO \r"; // Cadena de caracteres
+    if (PIR1bits.TXIF){  // Si txif esta disponible 
+            cadena("ZELDA ES EL MEJOR JUEGO\n\r"); // Llamar a la funcion
+        }  
+    
     // Envio de datos
     while (1){
-        __delay_ms(500);
-        
-        if (PIR1bits.TXIF){ // Si txif esta disponible 
-            TXREG = data; // Enviar el valor de data
-        }        
+        __delay_ms(500);      
     }       
 }
 
@@ -95,8 +97,16 @@ void setupUART(void){
     // Usar 8 bits
     
     // Paso 4:
-    TXSTAbits.TXEN = 1;         // Habilitamos la transmision
+    TXSTAbits.TXEN = 1;         // Habilitar transmision
     PIR1bits.TXIF = 0;
-    RCSTAbits.CREN = 1;         // Habilitamos la recepcion 
+    RCSTAbits.CREN = 1;         // Habilitar recepcion 
 }    
 
+//Funcion para mostrar texto
+void cadena(char *cursor){
+    while (*cursor != '\0'){ // Mientras el cursor sea diferente a nulo
+        while (PIR1bits.TXIF == 0); // Mientras que se este enviando no hacer nada
+            TXREG = *cursor; // Asignar el valor del cursor para enviar
+            *cursor++; // Aumentar posicion del cursor
+    }
+}

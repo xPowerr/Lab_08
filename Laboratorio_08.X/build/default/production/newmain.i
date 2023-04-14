@@ -2664,6 +2664,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 void setup(void);
 void setupUART(void);
+void cadena(char *cursor);
 
 
 void main(void){
@@ -2671,12 +2672,13 @@ void main(void){
     setupUART();
 
 
+    if (PIR1bits.TXIF){
+            cadena("ZELDA ES EL MEJOR JUEGO\n\r");
+        }
+
+
     while (1){
         _delay((unsigned long)((500)*(8000000/4000.0)));
-
-        if (PIR1bits.TXIF){
-            TXREG = data;
-        }
     }
 }
 
@@ -2719,4 +2721,13 @@ void setupUART(void){
     TXSTAbits.TXEN = 1;
     PIR1bits.TXIF = 0;
     RCSTAbits.CREN = 1;
+}
+
+
+void cadena(char *cursor){
+    while (*cursor != '\0'){
+        while (PIR1bits.TXIF == 0);
+            TXREG = *cursor;
+            *cursor++;
+    }
 }
