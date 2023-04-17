@@ -3,6 +3,10 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\Umul8_16.c
@@ -11,19 +15,21 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"35 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Quinto Semestre\Tareas\Programación de Microcontroladores\Labs\Lab_08\Laboratorio_08.X\newmain.c
+"45 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Quinto Semestre\Tareas\Programación de Microcontroladores\Labs\Lab_08\Laboratorio_08.X\newmain.c
 [v _isr isr `II(v  1 e 1 0 ]
-"49
+"63
 [v _main main `(v  1 e 1 0 ]
-"66
+"122
 [v _setup setup `(v  1 e 1 0 ]
-"86
+"144
 [v _setupUART setupUART `(v  1 e 1 0 ]
-"106
+"164
 [v _cadena cadena `(v  1 e 1 0 ]
+"172
+[v _setupADC setupADC `(v  1 e 1 0 ]
 "229 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S110 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S162 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -33,13 +39,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "483
-[s S119 . 1 `uc 1 . 1 0 :2:0 
+[s S171 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S124 . 1 `S110 1 . 1 0 `S119 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES124  1 e 1 @11 ]
+[u S176 . 1 `S162 1 . 1 0 `S171 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES176  1 e 1 @11 ]
 [s S22 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -51,7 +57,7 @@
 "554
 [u S30 . 1 `S22 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES30  1 e 1 @12 ]
-[s S180 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S232 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -61,25 +67,50 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1069
-[s S189 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S241 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S193 . 1 `uc 1 . 1 0 :6:0 
+[s S245 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S196 . 1 `uc 1 . 1 0 :6:0 
+[s S248 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S199 . 1 `S180 1 . 1 0 `S189 1 . 1 0 `S193 1 . 1 0 `S196 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES199  1 e 1 @24 ]
+[u S251 . 1 `S232 1 . 1 0 `S241 1 . 1 0 `S245 1 . 1 0 `S248 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES251  1 e 1 @24 ]
 "1134
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1141
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1239
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+[s S66 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1277
+[s S71 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S80 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S83 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S86 . 1 `S66 1 . 1 0 `S71 1 . 1 0 `S80 1 . 1 0 `S83 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES86  1 e 1 @31 ]
 "1479
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S91 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S143 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -88,23 +119,23 @@
 `uc 1 ADIE 1 0 :1:6 
 ]
 "1719
-[u S99 . 1 `S91 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES99  1 e 1 @140 ]
-[s S65 . 1 `uc 1 SCS 1 0 :1:0 
+[u S151 . 1 `S143 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES151  1 e 1 @140 ]
+[s S117 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1883
-[s S71 . 1 `uc 1 . 1 0 :4:0 
+[s S123 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S76 . 1 `S65 1 . 1 0 `S71 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES76  1 e 1 @143 ]
-[s S143 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S128 . 1 `S117 1 . 1 0 `S123 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES128  1 e 1 @143 ]
+[s S195 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -114,46 +145,98 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2583
-[s S152 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S204 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S156 . 1 `uc 1 . 1 0 :6:0 
+[s S208 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S159 . 1 `S143 1 . 1 0 `S152 1 . 1 0 `S156 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES159  1 e 1 @152 ]
+[u S211 . 1 `S195 1 . 1 0 `S204 1 . 1 0 `S208 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES211  1 e 1 @152 ]
 "2643
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+[s S276 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2992
+[u S282 . 1 `S276 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES282  1 e 1 @159 ]
 "3388
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3450
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"49 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Quinto Semestre\Tareas\Programación de Microcontroladores\Labs\Lab_08\Laboratorio_08.X\newmain.c
+"12 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Quinto Semestre\Tareas\Programación de Microcontroladores\Labs\Lab_08\Laboratorio_08.X\newmain.c
+[v _ascii ascii `[10]i  1 e 20 0 ]
+"14
+[v _bandera bandera `uc  1 e 1 0 ]
+"15
+[v _selector selector `uc  1 e 1 0 ]
+"16
+[v _flag flag `uc  1 e 1 0 ]
+"17
+[v _centena centena `ui  1 e 2 0 ]
+"18
+[v _decena decena `ui  1 e 2 0 ]
+"19
+[v _unidad unidad `ui  1 e 2 0 ]
+"20
+[v _pot pot `ui  1 e 2 0 ]
+"63
 [v _main main `(v  1 e 1 0 ]
 {
-"62
+"118
 } 0
-"86
+"144
 [v _setupUART setupUART `(v  1 e 1 0 ]
 {
-"103
+"161
 } 0
-"66
+"172
+[v _setupADC setupADC `(v  1 e 1 0 ]
+{
+"193
+} 0
+"122
 [v _setup setup `(v  1 e 1 0 ]
 {
-"84
+"142
 } 0
-"106
+"164
 [v _cadena cadena `(v  1 e 1 0 ]
 {
 [v cadena@cursor cursor `*.24uc  1 a 1 wreg ]
 [v cadena@cursor cursor `*.24uc  1 a 1 wreg ]
-[v cadena@cursor cursor `*.24uc  1 a 1 3 ]
-"112
+[v cadena@cursor cursor `*.24uc  1 a 1 5 ]
+"170
 } 0
-"35
+"45
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"41
+"54
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
 } 0
