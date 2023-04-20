@@ -2786,7 +2786,7 @@ void main(void){
 
 
 
-    cadena("Menu de opciones:\n\r1) Leer Potenciometro\n\r2) Enviar ASCII\n\r");
+
 
 
     while (1){

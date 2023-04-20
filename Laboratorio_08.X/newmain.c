@@ -67,7 +67,7 @@ void main(void){
     
     //char *cursor = "\r ZELDA MEJOR JUEGO \r"; // Cadena de caracteres
     
-    cadena("Menu de opciones:\n\r1) Leer Potenciometro\n\r2) Enviar ASCII\n\r"); // mostrar el menu como string
+    //cadena("Menu de opciones:\n\r1) Leer Potenciometro\n\r2) Enviar ASCII\n\r"); // mostrar el menu como string
     
     // Envio de datos
     while (1){

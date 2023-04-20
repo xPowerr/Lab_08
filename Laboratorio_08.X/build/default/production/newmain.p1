@@ -524,16 +524,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "66
 [; ;newmain.c: 66:     setupADC ();
 [e ( _setupADC ..  ]
-"70
-[; ;newmain.c: 70:     cadena("Menu de opciones:\n\r1) Leer Potenciometro\n\r2) Enviar ASCII\n\r");
-[e ( _cadena (1 :s 1C ]
 "73
 [; ;newmain.c: 73:     while (1){
 [e :U 143 ]
 {
 "74
 [; ;newmain.c: 74:         cadena("Menu de opciones:\n\r1) Leer Potenciometro\n\r2) Enviar ASCII\n\r");
-[e ( _cadena (1 :s 2C ]
+[e ( _cadena (1 :s 1C ]
 "75
 [; ;newmain.c: 75:         bandera = 1;
 [e = _bandera -> -> 1 `i `uc ]
@@ -563,10 +560,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "84
 [; ;newmain.c: 84:                 cadena("\n\r");
-[e ( _cadena (1 :s 3C ]
+[e ( _cadena (1 :s 2C ]
 "85
 [; ;newmain.c: 85:                 cadena("Seleccionada lectura de potenciometro:\n\r");
-[e ( _cadena (1 :s 4C ]
+[e ( _cadena (1 :s 3C ]
 "86
 [; ;newmain.c: 86:                 ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
@@ -590,7 +587,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _TXREG -> + *U + &U _ascii * -> _unidad `ux -> -> # *U &U _ascii `ui `ux -> 48 `i `uc ]
 "93
 [; ;newmain.c: 93:                 cadena("\n\r\n\r");
-[e ( _cadena (1 :s 5C ]
+[e ( _cadena (1 :s 4C ]
 "94
 [; ;newmain.c: 94:                 bandera = 0;
 [e = _bandera -> -> 0 `i `uc ]
@@ -607,19 +604,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "100
 [; ;newmain.c: 100:                 cadena("\n\r");
-[e ( _cadena (1 :s 6C ]
+[e ( _cadena (1 :s 5C ]
 "101
 [; ;newmain.c: 101:                 cadena("Seleccionado enviar ASCII:\n\r");
-[e ( _cadena (1 :s 7C ]
+[e ( _cadena (1 :s 6C ]
 "102
 [; ;newmain.c: 102:                 cadena("\n\r");
-[e ( _cadena (1 :s 8C ]
+[e ( _cadena (1 :s 7C ]
 "103
 [; ;newmain.c: 103:                 cadena("Ingrese caracter (solo un caracter)\n\r");
-[e ( _cadena (1 :s 9C ]
+[e ( _cadena (1 :s 8C ]
 "104
 [; ;newmain.c: 104:                 cadena("\n\r");
-[e ( _cadena (1 :s 10C ]
+[e ( _cadena (1 :s 9C ]
 "105
 [; ;newmain.c: 105:                 flag = 1;
 [e = _flag -> -> 1 `i `uc ]
@@ -820,12 +817,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 164 ]
 }
 [a 1C 77 101 110 117 32 100 101 32 111 112 99 105 111 110 101 115 58 10 13 49 41 32 76 101 101 114 32 80 111 116 101 110 99 105 111 109 101 116 114 111 10 13 50 41 32 69 110 118 105 97 114 32 65 83 67 73 73 10 13 0 ]
-[a 2C 77 101 110 117 32 100 101 32 111 112 99 105 111 110 101 115 58 10 13 49 41 32 76 101 101 114 32 80 111 116 101 110 99 105 111 109 101 116 114 111 10 13 50 41 32 69 110 118 105 97 114 32 65 83 67 73 73 10 13 0 ]
-[a 4C 83 101 108 101 99 99 105 111 110 97 100 97 32 108 101 99 116 117 114 97 32 100 101 32 112 111 116 101 110 99 105 111 109 101 116 114 111 58 10 13 0 ]
-[a 7C 83 101 108 101 99 99 105 111 110 97 100 111 32 101 110 118 105 97 114 32 65 83 67 73 73 58 10 13 0 ]
-[a 9C 73 110 103 114 101 115 101 32 99 97 114 97 99 116 101 114 32 40 115 111 108 111 32 117 110 32 99 97 114 97 99 116 101 114 41 10 13 0 ]
-[a 5C 10 13 10 13 0 ]
-[a 3C 10 13 0 ]
-[a 6C 10 13 0 ]
-[a 8C 10 13 0 ]
-[a 10C 10 13 0 ]
+[a 3C 83 101 108 101 99 99 105 111 110 97 100 97 32 108 101 99 116 117 114 97 32 100 101 32 112 111 116 101 110 99 105 111 109 101 116 114 111 58 10 13 0 ]
+[a 6C 83 101 108 101 99 99 105 111 110 97 100 111 32 101 110 118 105 97 114 32 65 83 67 73 73 58 10 13 0 ]
+[a 8C 73 110 103 114 101 115 101 32 99 97 114 97 99 116 101 114 32 40 115 111 108 111 32 117 110 32 99 97 114 97 99 116 101 114 41 10 13 0 ]
+[a 4C 10 13 10 13 0 ]
+[a 2C 10 13 0 ]
+[a 5C 10 13 0 ]
+[a 7C 10 13 0 ]
+[a 9C 10 13 0 ]

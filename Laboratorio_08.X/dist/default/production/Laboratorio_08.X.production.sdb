@@ -15,7 +15,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"45 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Quinto Semestre\Tareas\Programación de Microcontroladores\Labs\Lab_08\Laboratorio_08.X\newmain.c
+"45 C:\Users\Benzu\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Quinto Semestre\Tareas\Programación de Microcontroladores\Labs\Lab_08\Laboratorio_08.X\newmain.c
 [v _isr isr `II(v  1 e 1 0 ]
 "63
 [v _main main `(v  1 e 1 0 ]
@@ -169,7 +169,7 @@
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3450
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"12 C:\Users\Gabriel\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Quinto Semestre\Tareas\Programación de Microcontroladores\Labs\Lab_08\Laboratorio_08.X\newmain.c
+"12 C:\Users\Benzu\OneDrive - Universidad del Valle de Guatemala\Documentos\Universidad\Quinto Semestre\Tareas\Programación de Microcontroladores\Labs\Lab_08\Laboratorio_08.X\newmain.c
 [v _ascii ascii `[10]i  1 e 20 0 ]
 "14
 [v _bandera bandera `uc  1 e 1 0 ]
